@@ -1,0 +1,14 @@
+const display = document.querySelector('.display');
+const buttons = document.querySelectorAll('button');
+let currentNum = '';
+let firstNum = null;
+let operator = null;
+let result = null;
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('operator')) {
+      handleOperator(button.value);
+    } else if (button.value === '.') {
+
+
